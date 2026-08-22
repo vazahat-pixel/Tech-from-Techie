@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300F0FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m18 16 4-4-4-4'/><path d='m6 8-4 4 4 4'/><path d='m14.5 4-5 16'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>LearnPro | Master In-Demand Tech Skills From Microsoft & Cisco Industry Experts</title>
+    <meta name="title" content="LearnPro | Master In-Demand Tech Skills From Microsoft & Cisco Industry Experts" />
+    <meta name="description" content="Learn in-demand tech skills directly from senior professionals with 12-15+ years experience from Microsoft, Cisco & leading MNCs. Live interactive classes, real-world projects & 3-day free demo." />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LearnPro — Futuristic 3D EdTech Platform" />
+    <meta property="og:description" content="Learn directly from Microsoft, Cisco and MNC industry leaders with 12-15+ years of practical experience. Free 3-day live demo." />
+    
+    <!-- Google Fonts: Sora (display) + Plus Jakarta Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Paint the correct theme before React mounts (prevents light/dark flash) -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('learnpro-theme');
+          if (t !== 'dark' && t !== 'light') {
+            t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          var r = document.documentElement;
+          r.classList.remove('dark', 'light');
+          r.classList.add(t);
+          r.style.colorScheme = t;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="antialiased overflow-x-hidden font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
