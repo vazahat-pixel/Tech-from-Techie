@@ -43,7 +43,7 @@ const STUDENT_IMAGES = [
   },
 ];
 
-const INTERVAL_MS = 2500; // fast auto-transition every 2.5s
+const INTERVAL_MS = 50; // ultra-fast auto-transition every 50ms
 
 export const HeroVisual = memo(function HeroVisual() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -85,7 +85,7 @@ export const HeroVisual = memo(function HeroVisual() {
               loading={i === 0 ? 'eager' : 'lazy'}
               fetchPriority={i === 0 ? 'high' : 'auto'}
               decoding="async"
-              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out"
+              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[50ms] ease-linear"
               style={{
                 opacity: i === activeIndex ? 1 : 0,
                 zIndex: i === activeIndex ? 2 : 1,
