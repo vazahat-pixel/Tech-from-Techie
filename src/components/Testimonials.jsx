@@ -5,13 +5,42 @@ import { testimonials } from '../data/testimonials';
 import { SectionHeading } from './UI/SectionHeading';
 import { useReveal } from '../lib/useReveal';
 
-const AUTOPLAY_MS = 6500;
+const AUTOPLAY_MS = 4200;
+
+/**
+ * Slide transition.
+ *
+ * The card travels a full container width, so it genuinely slides in from the
+ * edge instead of cross-fading in place. Only transform and opacity animate,
+ * which the compositor handles without touching layout.
+ */
+const slideVariants = {
+  enter: (d) => ({ x: d.dir * d.w, opacity: 0 }),
+  center: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      x: { type: 'spring', stiffness: 300, damping: 34, mass: 0.85 },
+      opacity: { duration: 0.2 },
+    },
+  },
+  exit: (d) => ({
+    x: -d.dir * d.w,
+    opacity: 0,
+    transition: {
+      x: { type: 'spring', stiffness: 300, damping: 34, mass: 0.85 },
+      opacity: { duration: 0.3 },
+    },
+  }),
+};
 
 export const Testimonials = () => {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const [paused, setPaused] = useState(false);
   const touchStart = useRef(0);
+  const stageRef = useRef(null);
+  const [stageW, setStageW] = useState(720);
   const cardRef = useReveal();
 
   const go = useCallback((next, dir) => {
@@ -30,6 +59,16 @@ export const Testimonials = () => {
     }, AUTOPLAY_MS);
     return () => window.clearInterval(id);
   }, [paused]);
+
+  useEffect(() => {
+    const el = stageRef.current;
+    if (!el) return;
+    const measure = () => setStageW(el.clientWidth || 720);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
 
   const onTouchStart = (e) => {
     touchStart.current = e.touches[0].clientX;
@@ -66,16 +105,20 @@ export const Testimonials = () => {
         >
           {/* Fixed min-height prevents the layout jumping between quotes of
               different lengths — a common source of scroll-position shifts. */}
-          <div className="relative min-h-[268px] sm:min-h-[240px]" aria-live="polite">
-            <AnimatePresence mode="wait" custom={direction}>
+          <div
+            ref={stageRef}
+            className="relative min-h-[268px] sm:min-h-[240px] overflow-hidden rounded-2xl"
+            aria-live="polite"
+          >
+            <AnimatePresence initial={false} mode="sync" custom={{ dir: direction, w: stageW }}>
               <motion.figure
                 key={current.id}
-                custom={direction}
-                initial={{ opacity: 0, x: direction * 28 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: direction * -28 }}
-                transition={{ duration: 0.36, ease: [0.16, 1, 0.3, 1] }}
-                className="solid-card rounded-2xl p-6 sm:p-8 relative overflow-hidden"
+                custom={{ dir: direction, w: stageW }}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                className="solid-card rounded-2xl p-6 sm:p-8 absolute inset-0"
               >
                 <Quote className="absolute top-5 right-6 w-12 h-12 text-accent/[0.08] pointer-events-none" />
 
@@ -131,9 +174,22 @@ export const Testimonials = () => {
                   onClick={() => go(i, i > index ? 1 : -1)}
                   aria-label={`Review ${i + 1} of ${testimonials.length}`}
                   aria-current={i === index}
-                  className={`h-1.5 rounded-full cursor-pointer transition-all duration-400 ease-out-expo
-                              ${i === index ? 'w-7 bg-accent shadow-glow-cyan' : 'w-1.5 bg-line-strong hover:bg-accent/50'}`}
-                />
+                  className={`relative h-1.5 rounded-full cursor-pointer overflow-hidden
+                              transition-all duration-400 ease-out-expo
+                              ${i === index ? 'w-8 bg-accent/25' : 'w-1.5 bg-line-strong hover:bg-accent/50'}`}
+                >
+                  {/* Fills across the dwell time so the auto-advance is visible */}
+                  {i === index && (
+                    <span
+                      key={`${t.id}-${index}`}
+                      className="absolute inset-0 origin-left rounded-full bg-accent"
+                      style={{
+                        animation: `dot-fill ${AUTOPLAY_MS}ms linear forwards`,
+                        animationPlayState: paused ? 'paused' : 'running',
+                      }}
+                    />
+                  )}
+                </button>
               ))}
             </div>
 

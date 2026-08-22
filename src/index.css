@@ -283,6 +283,33 @@ html.dark .gradient-text-cyan-purple {
   border-radius: 4px;
 }
 
+@keyframes dot-fill {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* ==========================================================================
+   MARQUEE
+   Seamless looping row. The track renders two copies of the list and slides by
+   exactly 50%, so the restart is invisible. Pure CSS transform: the compositor
+   drives it, so it stays smooth regardless of main-thread work.
+   ========================================================================== */
+@keyframes marquee-slide {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+.marquee-track {
+  width: max-content;
+  animation: marquee-slide 38s linear infinite;
+  will-change: transform;
+}
+.marquee-track[data-paused='true'] { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
 /* ==========================================================================
    SCROLL REVEAL
    Pure CSS + IntersectionObserver toggling [data-revealed]. Avoids mounting a
