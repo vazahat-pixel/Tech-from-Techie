@@ -1,53 +1,54 @@
 /**
  * Why Learn With Us, Learning Experience & Roadmap Data.
+ * Updated for TechFromTECHIE's value propositions.
  */
 export const whyChooseUsFeatures = [
   {
-    id: "industry-experts",
+    id: "industry-mentors",
     icon: "Award",
-    title: "12-15+ Yrs Industry Mentors",
-    description: "Learn directly from senior software architects and leads with real-world engineering pedigrees from Microsoft, Cisco, and global MNCs.",
-    badge: "Top 1% Mentors",
+    title: "12+ Years Industry Mentors",
+    description: "Learn directly from seasoned technology professionals with over 12 years of real-world software engineering and enterprise development experience.",
+    badge: "Expert Mentors",
     glowColor: "cyan"
   },
   {
     id: "live-classes",
     icon: "Video",
-    title: "100% Live Interactive Classes",
-    description: "Engage in active, real-time sessions with interactive coding, live architectural design, and instant answer delivery instead of passive recorded videos.",
-    badge: "Real-time Coding",
+    title: "Live Interactive Classes",
+    description: "Engage in real-time sessions with live coding, interactive Q&A, and instant doubt resolution — not passive pre-recorded videos.",
+    badge: "Real-time Learning",
     glowColor: "purple"
   },
   {
     id: "real-projects",
     icon: "FolderGit2",
-    title: "Enterprise-Grade Projects",
-    description: "Build robust, production-ready capstone systems solving real architectural challenges that stand out significantly in senior portfolio reviews.",
-    badge: "Production Ready",
+    title: "Hands-on Real-World Projects",
+    description: "Build practical, portfolio-worthy projects that solve real engineering challenges and demonstrate your skills to employers.",
+    badge: "Project Based",
     glowColor: "blue"
   },
   {
-    id: "recorded-lectures",
-    icon: "Film",
-    title: "Lifetime HD Recordings",
-    description: "Missed a session? Revisit every high-definition lecture, annotated slide, and code repository anytime with unlimited lifetime cloud access.",
-    badge: "Never Miss Out",
+    id: "career-prep",
+    icon: "Briefcase",
+    title: "Career Preparation & Guidance",
+    description: "Comprehensive career support including resume building, mock interviews, coding practice, and personalized career guidance.",
+    badge: "Career Focused",
     glowColor: "cyan"
   },
   {
-    id: "study-materials",
+    id: "structured-learning",
     icon: "BookOpen",
-    title: "Comprehensive Study Systems",
-    description: "Access curated architectural cheat sheets, production code snippets, system design blueprints, and interview question banks.",
-    badge: "Structured Notes",
+    title: "Structured Learning Approach",
+    description: "Industry-oriented curriculum designed with clear milestones, chapter-wise assessments, and progressive skill building from basics to advanced.",
+    badge: "Structured Path",
     glowColor: "purple"
   },
   {
-    id: "career-guidance",
-    icon: "Briefcase",
-    title: "1-on-1 Career & Resume Strategy",
-    description: "Receive personalized resume reviews, LinkedIn profile optimization, technical portfolio audits, and rigorous 1-on-1 mock interviews.",
-    badge: "Career Focused",
+    id: "achievements",
+    icon: "Film",
+    title: "Certifications & Achievements",
+    description: "Earn industry-recognized certifications, complete internships, participate in hackathons, and build a verifiable achievement portfolio.",
+    badge: "Certified",
     glowColor: "blue"
   }
 ];
@@ -56,68 +57,68 @@ export const learningExperienceFeatures = [
   {
     icon: "Terminal",
     title: "Interactive Live Coding",
-    description: "Code along with mentors in cloud sandboxes with real-time feedback."
+    description: "Code along with mentors in real-time with hands-on practice."
   },
   {
     icon: "GitBranch",
-    title: "Version Controlled Repositories",
-    description: "Learn industrial Git workflows, PR reviews, and CI/CD automation."
+    title: "Real-World Projects",
+    description: "Build industry-relevant projects that strengthen your portfolio."
   },
   {
     icon: "MessageSquareCode",
-    title: "Dedicated Doubt-Clearing Hub",
-    description: "Get answers to your blockers within hours through dedicated mentor channels."
+    title: "Dedicated Doubt Solving",
+    description: "Get your questions answered directly by industry mentors."
   },
   {
     icon: "Cpu",
-    title: "Cloud Sandboxes & Lab Credits",
-    description: "Hands-on access to AWS, Azure, Docker, and Kubernetes sandbox environments."
+    title: "Practical Lab Sessions",
+    description: "Hands-on access to development environments and tools."
   },
   {
     icon: "CheckCircle2",
-    title: "Continuous Code Reviews",
-    description: "Every assignment is personally evaluated against strict clean code standards."
+    title: "Chapter-wise Assessments",
+    description: "Regular evaluations with mock interviews to track your progress."
   },
   {
     icon: "TrendingUp",
-    title: "Skill Benchmark Tracking",
-    description: "Monitor your technical proficiency and progress milestones on your dashboard."
+    title: "Skill Progression Tracking",
+    description: "Monitor your growth with structured milestones and feedback."
   },
   {
     icon: "Users2",
-    title: "High-Caliber Peer Community",
-    description: "Network and collaborate with ambitious engineers from top tech companies."
+    title: "Peer Learning Community",
+    description: "Collaborate with ambitious learners and build your professional network."
   },
   {
     icon: "GraduationCap",
-    title: "Verified Industry Credential",
-    description: "Receive a cryptographically verifiable certificate recognized across top MNCs."
+    title: "Industry Certifications",
+    description: "Receive recognized certifications upon successful course completion."
   }
 ];
 
 export const howItWorksSteps = [
   {
     step: "01",
-    title: "Choose Your Course",
-    description: "Explore our curated, in-demand technical specializations tailored for ambitious engineers.",
+    title: "Choose Your Program",
+    description: "Explore our industry-oriented technology programs and find the right fit for your career goals.",
     icon: "Compass"
   },
   {
     step: "02",
-    title: "Attend Free 3-Day Demo",
-    description: "Experience the teaching caliber, interact directly with the mentor, and evaluate the depth first-hand.",
+    title: "Book Your Free Demo",
+    description: "Experience our teaching approach one-to-one, meet a mentor, and understand the curriculum before you decide.",
     icon: "Sparkles"
   },
   {
     step: "03",
-    title: "Learn With Industry Experts",
-    description: "Participate in live weekend/weekday sessions, dive into labs, and master industrial engineering.",
+    title: "Learn & Build with Mentors",
+    description: "Attend live interactive classes, work on real projects, and get continuous mentorship from industry experts.",
     icon: "Code2"
   },
   {
     step: "04",
-    title: "Build Skills & Transition",
-    description: "Complete production-ready capstone systems, polish your portfolio, and land high-tier roles.",
+    title: "Get Career Ready",
+    description: "Complete your projects, earn certifications, and prepare for your career with mock interviews and guidance.",
     icon: "Rocket"
   }
 ];

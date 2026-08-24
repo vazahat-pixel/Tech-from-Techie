@@ -82,7 +82,7 @@ export const Testimonials = () => {
 
   return (
     <section id="testimonials" className="relative py-20 sm:py-28 overflow-hidden bg-radial-atmosphere">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-brand-cyan/[0.07] blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-brand-blue/[0.06] blur-[140px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
@@ -157,7 +157,7 @@ export const Testimonials = () => {
                   </div>
 
                   <span className="px-2.5 py-1 rounded-md text-[10.5px] font-medium
-                                   bg-brand-purple/12 text-brand-purple border border-brand-purple/25">
+                                   bg-indigo-500/12 text-indigo-600 dark:text-indigo-400 border border-indigo-500/25">
                     {current.course}
                   </span>
                 </figcaption>

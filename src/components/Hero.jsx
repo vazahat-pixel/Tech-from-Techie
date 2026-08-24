@@ -6,10 +6,10 @@ import { useModal } from '../context/ModalContext';
 import { scrollToTarget } from '../lib/smoothScroll';
 
 const TRUST_TAGS = [
-  { label: 'Microsoft Experienced Mentors', dot: 'bg-tech-microsoft' },
-  { label: 'Cisco Certified Architects', dot: 'bg-tech-cisco' },
-  { label: '12–15+ Years Experience', icon: ShieldCheck },
-  { label: 'Live + Lifetime Recordings', icon: Video },
+  { label: 'Industry Experienced Mentors', icon: ShieldCheck },
+  { label: '12+ Years Experience', icon: ShieldCheck },
+  { label: 'Live Interactive Classes', icon: Video },
+  { label: 'Indore, Madhya Pradesh', icon: ShieldCheck },
 ];
 
 export const Hero = () => {
@@ -22,8 +22,8 @@ export const Hero = () => {
     >
       {/* Atmosphere */}
       <div className="absolute inset-x-0 top-0 h-[620px] pointer-events-none bg-radial-atmosphere" />
-      <div className="absolute top-1/4 -left-40 w-[420px] h-[420px] rounded-full bg-brand-cyan/[0.09] blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/3 -right-40 w-[420px] h-[420px] rounded-full bg-brand-purple/[0.09] blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 -left-40 w-[420px] h-[420px] rounded-full bg-brand-blue/[0.07] blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 -right-40 w-[420px] h-[420px] rounded-full bg-brand-indigo/[0.07] blur-[120px] pointer-events-none" />
 
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-[1fr_minmax(340px,46%)] gap-10 lg:gap-8 items-center">
@@ -42,7 +42,7 @@ export const Hero = () => {
               className="font-display text-display-xl text-ink mt-5 text-balance"
               style={{ '--i': 1 }}
             >
-              Learn From Industry Experts.{' '}
+              From Learning to Leading.{' '}
               <span className="gradient-text-cyan-purple">Build Your Future.</span>
             </h1>
 
@@ -50,8 +50,8 @@ export const Hero = () => {
               className="text-body-lg text-ink-muted mt-5 max-w-xl mx-auto lg:mx-0 text-pretty"
               style={{ '--i': 2 }}
             >
-              {siteConfig.brand.subTagline} Live interactive classes, real-world projects, and
-              personalized 1-on-1 career mentorship.
+              {siteConfig.brand.subTagline} Industry-oriented technology training with
+              live interactive classes, real-world projects, and career mentorship.
             </p>
 
             {/* Trust tags */}
@@ -59,18 +59,14 @@ export const Hero = () => {
               className="flex flex-wrap justify-center lg:justify-start gap-2 mt-6"
               style={{ '--i': 3 }}
             >
-              {TRUST_TAGS.map(({ label, dot, icon: Icon }) => (
+              {TRUST_TAGS.map(({ label, icon: Icon }) => (
                 <li
                   key={label}
                   className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg
                              bg-[var(--surface-200)] border border-line
                              text-[11.5px] font-medium text-ink-muted"
                 >
-                  {dot ? (
-                    <span className={`w-1.5 h-1.5 rounded-full ${dot}`} />
-                  ) : (
-                    <Icon className="w-3.5 h-3.5 text-accent" />
-                  )}
+                  <Icon className="w-3.5 h-3.5 text-accent" />
                   {label}
                 </li>
               ))}
@@ -84,13 +80,13 @@ export const Hero = () => {
               <button
                 onClick={() => openEnrollModal('')}
                 className="btn-gradient btn-shine group w-full sm:w-auto px-7 py-3.5 rounded-xl
-                           text-[13px] font-bold text-[#04101F] shadow-glow-cyan hover:shadow-glow-mixed
+                           text-[13px] font-bold text-white shadow-glow-blue hover:shadow-glow-mixed
                            hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]
                            transition-[transform,box-shadow,background-position] duration-300 ease-out-expo
                            cursor-pointer inline-flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-4 h-4" />
-                <span>Get 3 Days Free Demo</span>
+                <span>Book Your Free Demo</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
 
@@ -103,7 +99,7 @@ export const Hero = () => {
                            transition-[transform,border-color,background-color] duration-300 ease-out-expo
                            cursor-pointer inline-flex items-center justify-center gap-2"
               >
-                <span>Explore Courses</span>
+                <span>Explore Programs</span>
                 <ChevronDown className="w-4 h-4 text-accent transition-transform duration-300 group-hover:translate-y-0.5" />
               </button>
             </div>
@@ -129,18 +125,11 @@ export const Hero = () => {
                 ))}
               </div>
               <div className="text-left">
-                <div className="flex items-center gap-1">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  ))}
-                  <span className="ml-1.5 text-[12px] font-bold text-ink">
-                    {siteConfig.heroProof.rating}
-                  </span>
-                </div>
+                <p className="text-[13px] font-bold text-ink leading-tight">
+                  {siteConfig.heroProof.rating}
+                </p>
                 <p className="text-[11.5px] text-ink-soft mt-0.5">
-                  Trusted by{' '}
-                  <span className="font-semibold text-ink">{siteConfig.heroProof.studentCount}</span>{' '}
-                  engineers
+                  {siteConfig.heroProof.ratingText}
                 </p>
               </div>
             </div>

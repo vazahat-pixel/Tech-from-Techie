@@ -8,22 +8,22 @@ import { useReveal } from '../lib/useReveal';
 const ICONS = { Award, Video, FolderGit2, Film, BookOpen, Briefcase };
 
 const TONES = {
-  cyan: { icon: 'text-brand-cyan', ring: 'border-brand-cyan/25', bg: 'from-brand-cyan/15 to-brand-blue/10' },
-  purple: { icon: 'text-brand-purple', ring: 'border-brand-purple/25', bg: 'from-brand-purple/15 to-brand-pink/10' },
-  blue: { icon: 'text-brand-blue', ring: 'border-brand-blue/25', bg: 'from-brand-blue/15 to-brand-indigo/10' },
+  cyan: { icon: 'text-blue-500 dark:text-blue-400', ring: 'border-blue-500/25', bg: 'from-blue-500/15 to-blue-600/10' },
+  purple: { icon: 'text-indigo-500 dark:text-indigo-400', ring: 'border-indigo-500/25', bg: 'from-indigo-500/15 to-violet-600/10' },
+  blue: { icon: 'text-blue-600 dark:text-blue-400', ring: 'border-blue-600/25', bg: 'from-blue-600/15 to-indigo-500/10' },
 };
 
 export const WhyChooseUs = () => (
   <section id="why-us" className="relative py-20 sm:py-28 overflow-hidden bg-grid-pattern">
-    <div className="absolute top-1/3 -left-32 w-80 h-80 rounded-full bg-brand-cyan/[0.07] blur-[110px] pointer-events-none" />
-    <div className="absolute bottom-0 -right-32 w-80 h-80 rounded-full bg-brand-purple/[0.07] blur-[110px] pointer-events-none" />
+    <div className="absolute top-1/3 -left-32 w-80 h-80 rounded-full bg-brand-blue/[0.06] blur-[110px] pointer-events-none" />
+    <div className="absolute bottom-0 -right-32 w-80 h-80 rounded-full bg-brand-indigo/[0.06] blur-[110px] pointer-events-none" />
 
     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeading
-        eyebrow="The LearnPro Advantage"
+        eyebrow="The TechFromTECHIE Advantage"
         eyebrowIcon={Award}
         title={<>Why Learn <span className="gradient-text-cyan-purple">With Us?</span></>}
-        subtitle="Live mentoring from senior MNC veterans, real enterprise architectures, and continuous 1-on-1 code reviews — not a generic course marketplace."
+        subtitle="Industry mentorship from experienced professionals, hands-on real-world projects, and structured career preparation — not a generic course platform."
       />
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mt-14">
@@ -69,7 +69,7 @@ const FeatureCard = memo(function FeatureCard({ feature, index }) {
           </p>
 
           <div className="flex items-center gap-1.5 mt-4 pt-3 border-t border-line">
-            <Check className="w-3 h-3 text-emerald-500 dark:text-emerald-400" strokeWidth={3} />
+            <Check className="w-3 h-3 text-emerald-600 dark:text-emerald-400" strokeWidth={3} />
             <span className="text-[11px] font-medium text-ink-soft">Included in all programs</span>
           </div>
         </div>

@@ -17,17 +17,17 @@ const STEP_IMAGES = [
 const STEP_ICONS = [Compass, Video, ShieldCheck, Rocket];
 
 const STEP_HIGHLIGHTS = [
-  ['Personalized curriculum matching', 'Prerequisites self-assessment', 'Full syllabus breakdown'],
-  ['Live interactive classroom sessions', '3 full days, entirely risk-free', 'Direct mentor Q&A and code review'],
-  ['12–15+ year MNC veterans', 'Architectural system design', 'Production-level code reviews'],
-  ['Deploy capstone microservices', 'Portfolio build & GitHub audit', 'Interview prep and referrals'],
+  ['Explore all technology tracks', 'Match your career goals', 'Understand the curriculum'],
+  ['One-to-one session with mentor', 'Experience live coding demo', 'Zero commitment required'],
+  ['12+ year industry professionals', 'Hands-on real-world projects', 'Chapter-wise mock interviews'],
+  ['Build professional portfolio', 'Earn certifications', 'Career guidance & placement prep'],
 ];
 
 const ACCENTS = [
-  { text: 'text-brand-cyan', bg: 'bg-brand-cyan', ring: 'ring-brand-cyan/40', glow: 'rgba(0,229,255,0.30)' },
-  { text: 'text-sky-400', bg: 'bg-sky-400', ring: 'ring-sky-400/40', glow: 'rgba(56,189,248,0.30)' },
-  { text: 'text-brand-purple', bg: 'bg-brand-purple', ring: 'ring-brand-purple/40', glow: 'rgba(139,92,246,0.30)' },
-  { text: 'text-amber-400', bg: 'bg-amber-400', ring: 'ring-amber-400/40', glow: 'rgba(245,165,36,0.30)' },
+  { text: 'text-blue-500 dark:text-blue-400', bg: 'bg-blue-500', ring: 'ring-blue-500/40', glow: 'rgba(37,99,235,0.25)' },
+  { text: 'text-blue-400 dark:text-blue-300', bg: 'bg-blue-400', ring: 'ring-blue-400/40', glow: 'rgba(96,165,250,0.25)' },
+  { text: 'text-indigo-500 dark:text-indigo-400', bg: 'bg-indigo-500', ring: 'ring-indigo-500/40', glow: 'rgba(99,102,241,0.25)' },
+  { text: 'text-emerald-500 dark:text-emerald-400', bg: 'bg-emerald-500', ring: 'ring-emerald-500/40', glow: 'rgba(16,185,129,0.25)' },
 ];
 
 export const HowItWorks = () => {
@@ -104,7 +104,7 @@ export const HowItWorks = () => {
               <div
                 ref={progressRef}
                 className="absolute inset-0 origin-top rounded-full
-                           bg-gradient-to-b from-brand-cyan via-brand-blue to-brand-purple"
+                           bg-gradient-to-b from-brand-blue via-blue-500 to-brand-indigo"
                 style={{ transform: 'scaleY(0)', willChange: 'transform' }}
               />
             </div>
@@ -136,7 +136,7 @@ export const HowItWorks = () => {
                       style={
                         isActive || isDone
                           ? {
-                              background: 'linear-gradient(135deg,#00E5FF,#3B82F6,#8B5CF6)',
+                              background: 'linear-gradient(135deg,#2563EB,#4338CA,#6D28D9)',
                               boxShadow: isActive ? `0 0 26px -4px ${accent.glow}` : 'none',
                             }
                           : undefined
@@ -191,12 +191,12 @@ export const HowItWorks = () => {
                             <button
                               onClick={() => openEnrollModal('')}
                               className="btn-gradient btn-shine group mt-3.5 inline-flex items-center gap-2
-                                         px-4 py-2 rounded-lg text-[12px] font-bold text-[#04101F]
-                                         shadow-glow-cyan hover:shadow-glow-mixed
+                                         px-4 py-2 rounded-lg text-[12px] font-bold text-white
+                                         shadow-glow-blue hover:shadow-glow-mixed
                                          active:scale-[0.97] transition-transform duration-200 cursor-pointer"
                             >
                               <Sparkles className="w-3.5 h-3.5" />
-                              <span>Start this step free</span>
+                              <span>Book your free demo</span>
                               <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                             </button>
                           )}

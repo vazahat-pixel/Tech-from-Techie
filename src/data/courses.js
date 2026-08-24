@@ -1,299 +1,397 @@
 /**
  * Comprehensive Course Catalog Configuration.
- * Fully configurable: Add, edit, or remove courses here.
+ * All 8 courses from TechFromTECHIE's official course offerings.
  */
 export const courses = [
   {
-    id: "full-stack-web-dev",
-    title: "Full Stack Web Development (MERN & Next.js)",
-    category: "Web Development",
-    badge: "Most Popular",
-    shortDescription: "Master modern full-stack development from frontend UI architecture to scalable backend microservices.",
-    description: "Designed and delivered by senior software engineers with 14+ years of industry experience. Build production-grade full stack applications using React, Next.js, Node.js, PostgreSQL, Docker, and AWS deployment.",
+    id: "corporate-elite",
+    title: "Corporate Elite Technology Program",
+    category: "Technology",
+    badge: "Flagship",
+    shortDescription: "Our flagship career-focused program combining technology learning, projects, mentorship, and career preparation.",
+    description: "A comprehensive career-oriented program designed to make you industry-ready. Combines structured learning across multiple technology tracks with hands-on projects, industry mentorship, and career preparation.",
     level: "Beginner to Advanced",
-    duration: "16 Weeks • 120+ Hours",
-    mode: "Live Classes + Recorded Access",
+    duration: "Customized by Track",
+    mode: "Offline & Online",
     instructorId: "inst-1",
-    rating: 4.95,
-    studentsCount: "3,400+",
+    rating: 4.9,
+    studentsCount: "Growing",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop&q=80",
+    technologies: ["Generative AI", "Full Stack", "Python AI/ML", "Cloud & DevOps", "Communication"],
+    curriculum: [
+      {
+        week: "Track 1",
+        title: "Generative AI Engineering",
+        topics: ["LLMs & Prompt Engineering", "AI Agents & Agentic AI", "RAG & Vector Databases", "AI Application Development"]
+      },
+      {
+        week: "Track 2",
+        title: "Enterprise Full Stack Engineering",
+        topics: ["Frontend & Backend Development", "REST APIs & Databases", "Authentication & Security", "Docker & Deployment"]
+      },
+      {
+        week: "Track 3",
+        title: "Python AI/ML",
+        topics: ["Python & OOP Fundamentals", "Data Analysis & Visualization", "Machine Learning & Deep Learning", "Model Evaluation & Feature Engineering"]
+      },
+      {
+        week: "Track 4",
+        title: "Cloud & DevOps + Communication Skills",
+        topics: ["Docker, Kubernetes & CI/CD", "AWS/Azure & Monitoring", "Professional Communication", "Interview & Presentation Skills"]
+      }
+    ],
+    projects: [
+      "Build real-world projects across your chosen technology track",
+      "Portfolio development with industry-standard practices",
+      "Capstone project with mentor code review"
+    ],
+    outcomes: [
+      "Become industry-ready across your chosen technology specialization",
+      "Build a professional portfolio with real-world projects",
+      "Receive career guidance, mock interviews, and mentorship"
+    ],
+    demoIncluded: true
+  },
+  {
+    id: "advanced-java-spring",
+    title: "Advanced Java, Spring Boot, Microservices & Spring AI",
+    category: "Technology",
+    badge: "Enterprise Grade",
+    shortDescription: "Build enterprise-ready backend and AI applications using modern Java and Spring technologies.",
+    description: "Master the Java ecosystem from core fundamentals to advanced Spring Boot, Microservices architecture, and cutting-edge Spring AI integration with LLMs. Designed for building production-grade enterprise applications.",
+    level: "Intermediate to Advanced",
+    duration: "To be finalized",
+    mode: "Offline & Online",
+    instructorId: "inst-1",
+    rating: 4.9,
+    studentsCount: "Growing",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=80",
-    technologies: ["React 18", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "Docker", "Tailwind CSS", "Redis"],
+    technologies: ["Core Java", "Spring Boot", "Microservices", "Kafka", "Docker", "Spring AI", "REST APIs"],
     curriculum: [
       {
-        week: "Weeks 1-4",
-        title: "Modern JavaScript, React 18 & State Architecture",
-        topics: ["ESNext, Async/Await & Event Loop", "React Hooks & Custom Hooks Lifecycle", "Tailwind CSS & Component Systems", "Zustand & Redux Toolkit State Management"]
+        week: "Module 1",
+        title: "Core & Advanced Java Foundations",
+        topics: ["Core Java & OOP Principles", "Java 8+ Features & Streams", "Collections Framework Deep Dive", "Multithreading & Concurrency"]
       },
       {
-        week: "Weeks 5-8",
-        title: "Full Stack Next.js App Router & Server Actions",
-        topics: ["Next.js Server vs Client Components", "API Routes & Server Actions", "Auth.js & Role-Based Access Control", "Optimistic UI Updates & Streaming SSR"]
+        week: "Module 2",
+        title: "Spring Boot & REST API Development",
+        topics: ["Spring Boot Architecture", "Building REST APIs", "JPA/Hibernate & Database Integration", "Spring Security & Authentication"]
       },
       {
-        week: "Weeks 9-12",
-        title: "Backend Microservices, Databases & Security",
-        topics: ["Node.js / Express Architecture", "PostgreSQL & Prisma ORM Modeling", "Redis Caching & Rate Limiting", "JWT, OAuth2 & Data Sanitization"]
+        week: "Module 3",
+        title: "Microservices Architecture",
+        topics: ["Microservices Design Patterns", "Apache Kafka Integration", "Docker Containerization", "Service Communication & Discovery"]
       },
       {
-        week: "Weeks 13-16",
-        title: "DevOps, CI/CD & Production Capstone",
-        topics: ["Docker Containerization", "GitHub Actions CI/CD Pipeline", "AWS ECS / Vercel Deployments", "Live Architecture Code Review & Mock Interviews"]
+        week: "Module 4",
+        title: "Spring AI & LLM Integration",
+        topics: ["Spring AI Framework", "LLM Integration Patterns", "Building AI-Powered Applications", "Production Deployment Strategies"]
       }
     ],
     projects: [
-      "Multi-tenant SaaS Workspace with Stripe Billing & Webhooks",
-      "Real-time Collaborative Whiteboard with WebSockets",
-      "High-throughput E-commerce Platform with Redis Queue"
+      "Enterprise microservices application with Spring Boot",
+      "AI-powered application using Spring AI and LLMs",
+      "Full production deployment with Docker and Kafka"
     ],
     outcomes: [
-      "Build & deploy enterprise-scale full stack web applications independently",
-      "Architect relational databases with Prisma & PostgreSQL",
-      "Confidently pass Senior Frontend & Full Stack coding interviews"
+      "Build enterprise-ready Java backend applications",
+      "Design and implement microservices architectures",
+      "Integrate AI capabilities into Spring applications"
     ],
     demoIncluded: true
   },
   {
-    id: "cisco-networking-security",
-    title: "Cisco Enterprise Networking & Cyber Infrastructure",
-    category: "Networking",
-    badge: "Industry Certified",
-    shortDescription: "Enterprise routing, switching, wireless security, and network automation aligned with CCNP/CCIE standards.",
-    description: "Taught by a Cisco-certified Network Architect with 15+ years of datacenter infrastructure experience. Hands-on packet tracer labs, BGP, OSPF, SD-WAN, and Python network automation.",
-    level: "Intermediate to Pro",
-    duration: "14 Weeks • 100+ Hours",
-    mode: "Live Hands-on Labs + Recorded Sessions",
-    instructorId: "inst-2",
-    rating: 4.92,
-    studentsCount: "2,100+",
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&auto=format&fit=crop&q=80",
-    technologies: ["Cisco IOS-XE", "BGP / OSPF", "SD-WAN", "Python Netmiko", "Wireshark", "Ansible", "VPN IPsec"],
-    curriculum: [
-      {
-        week: "Weeks 1-3",
-        title: "Advanced IP Routing & High Availability",
-        topics: ["Enterprise OSPF Multi-Area Design", "BGP Path Selection & Route Filtering", "FHRP Protocols (HSRP/VRRP)", "IPv6 Migration & Dual-Stack"]
-      },
-      {
-        week: "Weeks 4-7",
-        title: "Enterprise Switching & Campus Design",
-        topics: ["Spanning Tree Protocols (RSTP/MST)", "VLAN Trunks, VTP & QinQ", "EtherChannel & LACP Configurations", "Cisco Catalyst 9000 Architecture"]
-      },
-      {
-        week: "Weeks 8-11",
-        title: "Network Security, VPNs & SD-WAN",
-        topics: ["Site-to-Site & DMVPN IPsec Tunnels", "802.1X Network Access Control", "Cisco SD-WAN Controller Architecture", "Threat Mitigation & ACLs"]
-      },
-      {
-        week: "Weeks 12-14",
-        title: "Network Programmability & Automation",
-        topics: ["REST APIs & JSON/YANG Data Models", "Python Automation with Netmiko/NAPALM", "Ansible Playbooks for Switch Provisioning", "Lab Simulation Final Project"]
-      }
-    ],
-    projects: [
-      "Enterprise Multi-site SD-WAN & BGP Data Center Interconnect",
-      "Automated Configuration Backup & Compliance Bot via Python",
-      "High-Availability Secure Campus LAN with Zero Trust 802.1X"
-    ],
-    outcomes: [
-      "Design and troubleshoot Tier-3 enterprise enterprise networks",
-      "Master network automation using Python and Ansible",
-      "Prepare thoroughly for Cisco CCNP Enterprise certification exams"
-    ],
-    demoIncluded: true
-  },
-  {
-    id: "azure-cloud-devops",
-    title: "Microsoft Azure Cloud Architect & DevOps Engineering",
-    category: "Cloud",
-    badge: "High Demand",
-    shortDescription: "Master Azure cloud solutions, Kubernetes clusters, Terraform infrastructure-as-code, and Azure DevOps CI/CD.",
-    description: "Learn directly from a Microsoft-experienced Solutions Architect with 13+ years in cloud computing. Practical real-world cloud migrations, ARM/Bicep templates, AKS clusters, and hybrid networking.",
-    level: "Intermediate to Advanced",
-    duration: "14 Weeks • 110+ Hours",
-    mode: "Live Interactive + Cloud Lab Access",
-    instructorId: "inst-3",
-    rating: 4.96,
-    studentsCount: "2,800+",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
-    technologies: ["Azure Cloud", "Terraform", "Kubernetes (AKS)", "Azure DevOps", "Docker", "Bicep", "Prometheus", "Helm"],
-    curriculum: [
-      {
-        week: "Weeks 1-4",
-        title: "Azure Core Infrastructure & Networking",
-        topics: ["Virtual Networks, Subnets & Peering", "Azure Load Balancers & Application Gateways", "Virtual Machine Scale Sets & Storage Accounts", "Azure Active Directory / Entra ID Governance"]
-      },
-      {
-        week: "Weeks 5-8",
-        title: "Infrastructure as Code with Terraform & Bicep",
-        topics: ["Terraform State Management & Modules", "Automated Multi-environment Provisioning", "Azure Resource Manager (ARM) & Bicep", "Security Compliance Policies & Cost Guardrails"]
-      },
-      {
-        week: "Weeks 9-11",
-        title: "Azure Kubernetes Service (AKS) & Container Workloads",
-        topics: ["Docker Image Optimization & ACR", "AKS Cluster Deployment & Ingress Controllers", "Helm Charts & GitOps with ArgoCD", "Monitoring with Azure Monitor & Prometheus"]
-      },
-      {
-        week: "Weeks 12-14",
-        title: "Azure DevOps CI/CD & Cloud Migration Capstone",
-        topics: ["YAML Pipelines for Multi-stage Releases", "Zero-downtime Blue/Green & Canary Deployments", "On-premise to Cloud Migration Strategy", "Architecture Review & Disaster Recovery"]
-      }
-    ],
-    projects: [
-      "End-to-end Automated AKS Microservice Platform via Terraform",
-      "Multi-region Disaster Recovery & Failover Pipeline in Azure",
-      "Enterprise CI/CD Governance Pipeline with Automated Security Scanning"
-    ],
-    outcomes: [
-      "Architect resilient, fault-tolerant Azure cloud environments",
-      "Deploy and manage containerized microservices in Kubernetes",
-      "Achieve deep preparation for AZ-104 and AZ-305 Architect certifications"
-    ],
-    demoIncluded: true
-  },
-  {
-    id: "python-data-engineering",
-    title: "Python Data Engineering & Distributed Systems",
-    category: "Data / AI",
-    badge: "Career Track",
-    shortDescription: "Build high-speed data pipelines with Apache Spark, Kafka, Python, Airflow, and Snowflake datalakes.",
-    description: "Learn modern big data architectures from an MNC Principal Data Engineer with 12+ years of experience in distributed stream processing, batch pipelines, and analytics engineering.",
+    id: "full-stack-engineering",
+    title: "Enterprise Full Stack Engineering",
+    category: "Technology",
+    badge: "Most Popular",
+    shortDescription: "Learn to design and build complete web applications from frontend to backend, database, security, testing, and deployment.",
+    description: "Comprehensive full stack development covering multiple technology paths — Java Full Stack, Python Full Stack, MERN, and MEAN. From HTML to deployment, build production-ready applications end to end.",
     level: "Beginner to Advanced",
-    duration: "14 Weeks • 105+ Hours",
-    mode: "Live Practical + Cloud Datalake Labs",
-    instructorId: "inst-4",
-    rating: 4.88,
-    studentsCount: "1,950+",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
-    technologies: ["Python 3.12", "Apache Spark", "Apache Kafka", "Apache Airflow", "Snowflake", "dbt", "PostgreSQL", "Pandas"],
-    curriculum: [
-      {
-        week: "Weeks 1-3",
-        title: "Advanced Python for Data & OOP Patterns",
-        topics: ["Generators, Decorators & Multiprocessing", "Vectorized Computing with NumPy & Pandas", "SQL Mastery: Window Functions & Query Plan Analysis", "Data Modeling: Star Schema vs Data Vault 2.0"]
-      },
-      {
-        week: "Weeks 4-7",
-        title: "Distributed Data Processing with Apache Spark",
-        topics: ["PySpark RDDs, DataFrames & Catalyst Optimizer", "Handling Data Skew & Partitioning Strategies", "Spark Streaming with Delta Lake Lakehouse", "Performance Tuning & Memory Management"]
-      },
-      {
-        week: "Weeks 8-11",
-        title: "Real-time Streaming with Kafka & Orchestration with Airflow",
-        topics: ["Kafka Producers, Consumers & Consumer Groups", "Schema Registry & Avro Serialization", "Building DAGs & Custom Operators in Airflow", "Data Quality Testing with Great Expectations & dbt"]
-      },
-      {
-        week: "Weeks 12-14",
-        title: "Cloud Datalake with Snowflake & Capstone",
-        topics: ["Snowflake Virtual Warehouses & Snowpipe", "End-to-end Lakehouse Architecture", "Production Pipeline Monitoring & Alerting", "Live Capstone Defense & Mock Interviews"]
-      }
-    ],
-    projects: [
-      "Real-time Financial Fraud Detection Pipeline using Kafka & Spark",
-      "Automated E-commerce ELT Data Warehouse using dbt & Snowflake",
-      "Airflow Automated Multi-source Weather & Sensor Ingestion Lakehouse"
-    ],
-    outcomes: [
-      "Design end-to-end distributed data pipelines processing millions of events",
-      "Master Apache Spark, Kafka, and Apache Airflow orchestration",
-      "Transition into high-paying Data Engineer and Big Data roles"
-    ],
-    demoIncluded: true
-  },
-  {
-    id: "ai-machine-learning",
-    title: "Applied AI, LLMs & Machine Learning Engineering",
-    category: "Data / AI",
-    badge: "Trending",
-    shortDescription: "Build and deploy generative AI agents, RAG pipelines, fine-tuned LLMs, and PyTorch deep learning models.",
-    description: "Deep dive into Applied AI from fundamentals of Machine Learning to Generative AI architectures, LangChain, Vector Databases (Pinecone/Chroma), and production model inference servers.",
-    level: "Intermediate to Advanced",
-    duration: "16 Weeks • 125+ Hours",
-    mode: "Live Coding + GPU Cloud Environments",
+    duration: "To be finalized",
+    mode: "Offline & Online",
     instructorId: "inst-1",
-    rating: 4.98,
-    studentsCount: "3,100+",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop&q=80",
-    technologies: ["PyTorch", "LangChain", "OpenAI / Llama 3", "Vector DBs", "FastAPI", "HuggingFace", "Docker", "MLflow"],
+    rating: 4.9,
+    studentsCount: "Growing",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format&fit=crop&q=80",
+    technologies: ["HTML/CSS", "JavaScript", "React/Angular", "Node.js", "SQL/NoSQL", "Docker", "Git"],
     curriculum: [
       {
-        week: "Weeks 1-4",
-        title: "Machine Learning Foundations & Supervised Models",
-        topics: ["Feature Engineering & Exploratory Analysis", "Regression, Decision Trees & Random Forests", "Gradient Boosting (XGBoost & LightGBM)", "Hyperparameter Optimization with Optuna"]
+        week: "Module 1",
+        title: "Frontend Foundations",
+        topics: ["HTML, CSS & JavaScript", "TypeScript Fundamentals", "React or Angular Framework", "Responsive Design & UI Architecture"]
       },
       {
-        week: "Weeks 5-8",
-        title: "Deep Learning & Computer Vision / NLP with PyTorch",
-        topics: ["Neural Networks, Backpropagation & Optimizers", "CNNs & Vision Transformers", "RNNs, Transformers & Attention Mechanism", "Model Evaluation & Loss Function Design"]
+        week: "Module 2",
+        title: "Backend Development",
+        topics: ["Backend with Java/Python/Node.js", "REST API Design & Implementation", "SQL & NoSQL Databases", "Authentication & Security"]
       },
       {
-        week: "Weeks 9-12",
-        title: "Generative AI, LLMs & Retrieval-Augmented Generation (RAG)",
-        topics: ["OpenAI API & Local Open-Source LLMs (Llama 3)", "LangChain & LlamaIndex Frameworks", "Vector Embeddings & Semantic Search (Pinecone/Qdrant)", "Advanced RAG: HyDE, Re-ranking & Context Compression"]
+        week: "Module 3",
+        title: "DevOps & Deployment",
+        topics: ["Git & GitHub Workflows", "Testing & Quality Assurance", "Docker Containerization", "Cloud Deployment"]
       },
       {
-        week: "Weeks 13-16",
-        title: "AI Agents, Model Deployment & MLOps",
-        topics: ["Autonomous Multi-Agent Systems (CrewAI)", "Serving Models with FastAPI & Triton", "Quantization (LoRA / QLoRA Fine-tuning)", "Production MLOps Pipeline Capstone"]
+        week: "Module 4",
+        title: "Advanced Full Stack & AI Integration",
+        topics: ["Full Stack Architecture Patterns", "AI Integration in Web Apps", "Performance Optimization", "Production-Ready Applications"]
       }
     ],
     projects: [
-      "Enterprise Multi-modal RAG Assistant for Legal & Technical Docs",
-      "Autonomous Market Research AI Agent Swarm with Tool Calling",
-      "Fine-tuned Domain-Specific LLM on Specialized Customer Data"
+      "Full stack web application with authentication and database",
+      "REST API-driven application with modern frontend",
+      "Deployed production application with CI/CD pipeline"
     ],
     outcomes: [
-      "Build commercial GenAI applications, autonomous agents, and RAG systems",
-      "Fine-tune and deploy open-source LLMs in cloud production",
-      "Bridge the gap between theoretical AI research and production AI engineering"
+      "Design and build complete web applications end to end",
+      "Master frontend, backend, database, and deployment",
+      "Choose and excel in your preferred technology stack"
     ],
     demoIncluded: true
   },
   {
-    id: "cyber-security-defense",
-    title: "Cyber Security Defense & Ethical Penetration Testing",
-    category: "Security",
-    badge: "Essential Track",
-    shortDescription: "Hands-on vulnerability assessment, penetration testing, SIEM SOC operations, and enterprise defense.",
-    description: "Taught by a senior enterprise security consultant with 14+ years in cyber defense and penetration testing. Live labs covering web application security, Active Directory attacks, and threat hunting.",
+    id: "generative-ai",
+    title: "Generative AI & AI Engineering",
+    category: "AI & Data",
+    badge: "Trending",
+    shortDescription: "Learn to build practical AI applications using modern LLM technologies and AI workflows.",
+    description: "Master the full spectrum of Generative AI — from prompt engineering to building autonomous AI agents. Learn LLM APIs, embeddings, vector databases, RAG pipelines, function calling, and agentic AI application development.",
     level: "Beginner to Advanced",
-    duration: "14 Weeks • 95+ Hours",
-    mode: "Live Virtual Cyber Labs + Mentorship",
-    instructorId: "inst-2",
-    rating: 4.91,
-    studentsCount: "1,800+",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop&q=80",
-    technologies: ["Kali Linux", "Burp Suite Pro", "Wireshark", "Metasploit", "Splunk SIEM", "Active Directory", "Python"],
+    duration: "To be finalized",
+    mode: "Offline & Online",
+    instructorId: "inst-1",
+    rating: 4.9,
+    studentsCount: "Growing",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop&q=80",
+    technologies: ["Generative AI", "LLMs", "Prompt Engineering", "RAG", "Vector DBs", "AI Agents", "Agentic AI"],
     curriculum: [
       {
-        week: "Weeks 1-4",
-        title: "Network Security & Cyber Reconnaissance",
-        topics: ["TCP/IP Protocol Attacks & Wireshark Analysis", "OSINT & Active/Passive Reconnaissance", "Nmap Port Scanning & Vulnerability Mapping", "Firewalls, IDS/IPS Configuration & Bypass"]
+        week: "Module 1",
+        title: "Generative AI & LLM Foundations",
+        topics: ["Understanding Generative AI", "Large Language Models (LLMs)", "Prompt Engineering Techniques", "LLM APIs & Integration"]
       },
       {
-        week: "Weeks 5-8",
-        title: "Web Application Penetration Testing (OWASP Top 10)",
-        topics: ["SQL Injection & Cross-Site Scripting (XSS)", "Authentication & Session Management Flaws", "CSRF, SSRF & IDOR Vulnerability Exploitation", "API Security Testing with Burp Suite Pro"]
+        week: "Module 2",
+        title: "Embeddings & Retrieval Systems",
+        topics: ["Text Embeddings & Vector Representations", "Vector Databases", "Retrieval-Augmented Generation (RAG)", "Semantic Search & Similarity"]
       },
       {
-        week: "Weeks 9-11",
-        title: "Enterprise Active Directory & Network Exploitation",
-        topics: ["Kerberoasting & AS-REP Roasting", "Pass-the-Hash & Lateral Movement Techniques", "Privilege Escalation in Windows & Linux", "Defensive Hardening & Group Policy Objects"]
+        week: "Module 3",
+        title: "AI Workflows & Function Calling",
+        topics: ["Function Calling Patterns", "AI Workflow Design", "Chaining & Orchestration", "Building AI Applications"]
       },
       {
-        week: "Weeks 12-14",
-        title: "SOC Operations, SIEM Threat Hunting & Incident Response",
-        topics: ["Splunk SIEM Log Analysis & Detection Rules", "MITRE ATT&CK Framework Mapping", "Incident Response Playbooks & Forensics", "Simulated Red Team vs Blue Team CTF"]
+        week: "Module 4",
+        title: "AI Agents & Agentic AI",
+        topics: ["AI Agent Architecture", "Autonomous Agent Systems", "Agentic AI Patterns", "Production AI Application Development"]
       }
     ],
     projects: [
-      "Complete Vulnerability Assessment & Penetration Test of a FinTech App",
-      "Active Directory Domain Compromise & Hardening Blueprint",
-      "Custom SIEM Alerting System with Splunk for Ransomware Detection"
+      "Build a RAG-powered knowledge assistant",
+      "Create an autonomous AI agent with tool calling",
+      "Develop an AI-powered application for real-world use"
     ],
     outcomes: [
-      "Conduct professional penetration tests and write executive audit reports",
-      "Detect, investigate, and remediate advanced persistent cyber threats",
-      "Prepare for CEH, OSCP, and CompTIA Security+ certifications"
+      "Build practical AI applications using modern LLM technologies",
+      "Design and implement RAG pipelines and AI agents",
+      "Develop production-ready agentic AI systems"
+    ],
+    demoIncluded: true
+  },
+  {
+    id: "python-ai-ml",
+    title: "Python, AI & Machine Learning",
+    category: "AI & Data",
+    badge: "Career Track",
+    shortDescription: "Build strong foundations in Python, data analysis, machine learning, and AI application development.",
+    description: "From Python fundamentals to advanced machine learning — master data analysis, visualization, statistical modeling, and deep learning. Build real ML models for regression, classification, and clustering.",
+    level: "Beginner to Advanced",
+    duration: "To be finalized",
+    mode: "Offline & Online",
+    instructorId: "inst-1",
+    rating: 4.9,
+    studentsCount: "Growing",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+    technologies: ["Python", "NumPy", "Pandas", "Machine Learning", "Deep Learning", "Data Visualization"],
+    curriculum: [
+      {
+        week: "Module 1",
+        title: "Python & Data Foundations",
+        topics: ["Python Programming & OOP", "NumPy & Pandas", "Data Cleaning & Preparation", "Data Analysis Techniques"]
+      },
+      {
+        week: "Module 2",
+        title: "Data Visualization & Statistics",
+        topics: ["Data Visualization Libraries", "Statistical Foundations", "Exploratory Data Analysis", "Feature Engineering"]
+      },
+      {
+        week: "Module 3",
+        title: "Machine Learning",
+        topics: ["Regression & Classification", "Clustering Algorithms", "Model Evaluation & Tuning", "Ensemble Methods"]
+      },
+      {
+        week: "Module 4",
+        title: "Deep Learning & Advanced ML",
+        topics: ["Neural Network Foundations", "Deep Learning Architectures", "Advanced Model Techniques", "Production ML Pipelines"]
+      }
+    ],
+    projects: [
+      "End-to-end data analysis and visualization project",
+      "Machine learning model for real-world prediction",
+      "Deep learning application with production deployment"
+    ],
+    outcomes: [
+      "Master Python for data science and AI applications",
+      "Build and evaluate machine learning models",
+      "Develop end-to-end AI/ML solutions"
+    ],
+    demoIncluded: true
+  },
+  {
+    id: "cloud-devops",
+    title: "Cloud & DevOps Professional",
+    category: "Technology",
+    badge: "High Demand",
+    shortDescription: "Learn how modern applications are developed, deployed, automated, and operated in production.",
+    description: "From Linux fundamentals to Kubernetes orchestration — master the complete DevOps lifecycle including Docker, CI/CD pipelines, cloud platforms, monitoring, and production deployment practices.",
+    level: "Intermediate to Advanced",
+    duration: "To be finalized",
+    mode: "Offline & Online",
+    instructorId: "inst-2",
+    rating: 4.9,
+    studentsCount: "Growing",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
+    technologies: ["Linux", "Docker", "Kubernetes", "CI/CD", "AWS/Azure", "Jenkins", "GitHub Actions"],
+    curriculum: [
+      {
+        week: "Module 1",
+        title: "Linux, Networking & Version Control",
+        topics: ["Linux Fundamentals & Administration", "Networking Concepts", "Git & GitHub Workflows", "Shell Scripting"]
+      },
+      {
+        week: "Module 2",
+        title: "Containerization & Orchestration",
+        topics: ["Docker Containerization", "Kubernetes Architecture", "Container Orchestration", "Helm & Package Management"]
+      },
+      {
+        week: "Module 3",
+        title: "CI/CD & Automation",
+        topics: ["Jenkins Pipeline Setup", "GitHub Actions Workflows", "Automated Testing & Deployment", "Infrastructure as Code"]
+      },
+      {
+        week: "Module 4",
+        title: "Cloud Platforms & Monitoring",
+        topics: ["AWS/Azure Cloud Services", "Cloud Deployment Strategies", "Monitoring & Observability", "DevOps Best Practices"]
+      }
+    ],
+    projects: [
+      "Automated CI/CD pipeline with Docker and Kubernetes",
+      "Cloud-deployed application with monitoring",
+      "Infrastructure automation with modern DevOps tools"
+    ],
+    outcomes: [
+      "Master containerization and cloud deployment",
+      "Design and implement CI/CD pipelines",
+      "Operate production-grade cloud infrastructure"
+    ],
+    demoIncluded: true
+  },
+  {
+    id: "campus-placement",
+    title: "Campus Placement Training",
+    category: "Career",
+    badge: "Essential",
+    shortDescription: "Prepare for technical and non-technical stages of the campus placement journey.",
+    description: "Comprehensive placement preparation covering programming, DSA, aptitude, logical reasoning, technical and HR interviews, mock interviews, resume building, and career guidance — everything you need to crack campus placements.",
+    level: "Beginner to Advanced",
+    duration: "To be finalized",
+    mode: "Offline & Online",
+    instructorId: "inst-2",
+    rating: 4.9,
+    studentsCount: "Growing",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&auto=format&fit=crop&q=80",
+    technologies: ["Programming", "DSA", "SQL", "Aptitude", "Interview Prep", "Resume Building"],
+    curriculum: [
+      {
+        week: "Module 1",
+        title: "Programming & DSA Foundations",
+        topics: ["Programming Fundamentals", "Data Structures & Algorithms", "OOP Concepts", "SQL & Database Queries"]
+      },
+      {
+        week: "Module 2",
+        title: "Coding Practice & Problem Solving",
+        topics: ["Competitive Coding Practice", "Pattern Recognition", "Time & Space Complexity", "Problem-Solving Strategies"]
+      },
+      {
+        week: "Module 3",
+        title: "Aptitude & Reasoning",
+        topics: ["Quantitative Aptitude", "Logical Reasoning", "Verbal Ability", "Data Interpretation"]
+      },
+      {
+        week: "Module 4",
+        title: "Interview Preparation & Career Guidance",
+        topics: ["Technical Interview Prep", "HR Interview Techniques", "Mock Interview Sessions", "Resume Building & Career Guidance"]
+      }
+    ],
+    projects: [
+      "Build a strong coding portfolio on platforms",
+      "Resume optimization and LinkedIn profile setup",
+      "Complete mock interview series with feedback"
+    ],
+    outcomes: [
+      "Crack technical and HR rounds of campus placements",
+      "Build a professional resume and online presence",
+      "Develop strong problem-solving and communication skills"
+    ],
+    demoIncluded: true
+  },
+  {
+    id: "communication-skills",
+    title: "Communication Skills & Personality Development",
+    category: "Career",
+    badge: "Professional Growth",
+    shortDescription: "Develop professional communication, confidence, interview skills, and workplace readiness.",
+    description: "Build the soft skills that set you apart — spoken English, professional communication, presentation skills, group discussions, interview communication, and personality development for workplace success.",
+    level: "Beginner to Advanced",
+    duration: "To be finalized",
+    mode: "Offline & Online",
+    instructorId: "inst-2",
+    rating: 4.9,
+    studentsCount: "Growing",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80",
+    technologies: ["Spoken English", "Presentation Skills", "Interview Skills", "Group Discussion", "Confidence"],
+    curriculum: [
+      {
+        week: "Module 1",
+        title: "Spoken English & Communication",
+        topics: ["Spoken English Fundamentals", "Professional Communication", "Active Listening Skills", "Workplace Etiquette"]
+      },
+      {
+        week: "Module 2",
+        title: "Interview & Presentation Skills",
+        topics: ["Interview Communication", "Presentation Techniques", "Storytelling & Persuasion", "Body Language & Confidence"]
+      },
+      {
+        week: "Module 3",
+        title: "Group Discussions & Team Skills",
+        topics: ["Group Discussion Strategies", "Team Collaboration", "Conflict Resolution", "Leadership Communication"]
+      },
+      {
+        week: "Module 4",
+        title: "Personality Development",
+        topics: ["Confidence Building", "Personal Branding", "Professional Networking", "Continuous Self-Improvement"]
+      }
+    ],
+    projects: [
+      "Deliver a professional presentation with feedback",
+      "Participate in simulated group discussions",
+      "Complete a mock interview series"
+    ],
+    outcomes: [
+      "Communicate professionally in workplace settings",
+      "Present ideas with confidence and clarity",
+      "Excel in interviews and group discussions"
     ],
     demoIncluded: true
   }
@@ -301,9 +399,7 @@ export const courses = [
 
 export const courseCategories = [
   "All Courses",
-  "Web Development",
-  "Cloud",
-  "Networking",
-  "Data / AI",
-  "Security"
+  "Technology",
+  "AI & Data",
+  "Career"
 ];

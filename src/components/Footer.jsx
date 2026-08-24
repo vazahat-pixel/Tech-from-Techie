@@ -1,11 +1,11 @@
 import React, { memo } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Youtube, Github, Twitter, Sparkles, ArrowUp } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Youtube, Instagram, Facebook, Sparkles, ArrowUp } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import { useModal } from '../context/ModalContext';
 import { scrollToTarget } from '../lib/smoothScroll';
 import logoUrl from '../Tech Logo.svg';
 
-const SOCIAL_ICONS = { Linkedin, Youtube, Github, Twitter };
+const SOCIAL_ICONS = { Linkedin, Youtube, Instagram, Facebook };
 
 export const Footer = () => {
   const { openEnrollModal } = useModal();
@@ -37,7 +37,7 @@ export const Footer = () => {
             >
               <span className="logo-plate flex items-center rounded-xl px-3 py-2
                                transition-[transform,box-shadow] duration-300 ease-out-expo
-                               group-hover:-translate-y-px group-hover:shadow-glow-cyan">
+                               group-hover:-translate-y-px group-hover:shadow-glow-blue">
                 <img
                   src={logoUrl}
                   alt={siteConfig.brand.name}
@@ -49,8 +49,8 @@ export const Footer = () => {
             </a>
 
             <p className="text-body-sm text-ink-muted leading-relaxed max-w-sm mt-4">
-              Empowering engineers worldwide through live, production-grade technical education
-              mentored by senior staff architects from Microsoft, Cisco and global tech leaders.
+              Industry-oriented technology training academy based in Indore, Madhya Pradesh.
+              Helping students, job seekers, and IT professionals develop practical, career-focused technology skills.
             </p>
 
             <ul className="space-y-2 mt-5 text-[12.5px]">
@@ -61,13 +61,13 @@ export const Footer = () => {
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-brand-purple shrink-0" />
+                <Phone className="w-4 h-4 text-accent shrink-0" />
                 <a href={`tel:${siteConfig.contact.phone}`} className="text-ink-muted hover:text-accent transition-colors">
                   {siteConfig.contact.phone}
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
-                <MapPin className="w-4 h-4 text-emerald-500 shrink-0" />
+                <MapPin className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
                 <span className="text-ink-muted">{siteConfig.contact.location}</span>
               </li>
             </ul>
@@ -94,7 +94,7 @@ export const Footer = () => {
           </div>
 
           {/* ---------- Link columns ---------- */}
-          <FooterColumn title="Top Programs" links={siteConfig.footerLinks.courses} onNav={handleNavClick} />
+          <FooterColumn title="Our Programs" links={siteConfig.footerLinks.courses} onNav={handleNavClick} />
           <FooterColumn title="Company" links={siteConfig.footerLinks.company} onNav={handleNavClick} />
 
           <div>
@@ -135,7 +135,7 @@ export const Footer = () => {
 
           <div className="flex items-center gap-4">
             <span className="text-[12px] text-ink-soft hidden sm:inline">
-              Crafted for high-performance engineering careers
+              From Learning to Leading
             </span>
             <button
               onClick={toTop}

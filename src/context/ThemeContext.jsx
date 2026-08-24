@@ -4,7 +4,7 @@ const ThemeContext = createContext(null);
 
 function readInitialTheme() {
   try {
-    const saved = localStorage.getItem('learnpro-theme');
+    const saved = localStorage.getItem('techfromtechie-theme');
     if (saved === 'dark' || saved === 'light') return saved;
     if (window.matchMedia('(prefers-color-scheme: light)').matches) return 'light';
   } catch {
@@ -24,7 +24,7 @@ export const ThemeProvider = ({ children }) => {
     root.style.colorScheme = theme;
 
     try {
-      localStorage.setItem('learnpro-theme', theme);
+      localStorage.setItem('techfromtechie-theme', theme);
     } catch {
       /* ignore */
     }
@@ -46,7 +46,7 @@ export const ThemeProvider = ({ children }) => {
     const mq = window.matchMedia('(prefers-color-scheme: light)');
     const onChange = (e) => {
       try {
-        if (localStorage.getItem('learnpro-theme')) return;
+        if (localStorage.getItem('techfromtechie-theme')) return;
       } catch {
         /* ignore */
       }

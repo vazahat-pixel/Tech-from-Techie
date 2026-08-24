@@ -143,7 +143,7 @@ export const EnrollmentModal = () => {
       // The lead is still captured client-side; surface a recoverable error
       // rather than silently pretending the request succeeded.
       setServerError(
-        "We couldn't reach the server. Please retry, or email admissions@learnpro.edu and we'll reserve your seat."
+        "We couldn't reach the server. Please retry, or email info@techfromtechie.com and we'll reserve your seat."
       );
     } finally {
       setIsSubmitting(false);
@@ -225,14 +225,14 @@ export const EnrollmentModal = () => {
                   <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold
                                    bg-accent-soft text-accent border border-accent/30">
                     <Sparkles className="w-2.5 h-2.5" />
-                    FREE 3-DAY LIVE DEMO
+                    FREE ONE-TO-ONE DEMO
                   </span>
 
                   <h2 id="enroll-title" className="font-display text-[19px] font-bold text-ink mt-2 leading-tight pr-8">
                     Book Your Demo Class
                   </h2>
                   <p className="text-[12px] text-ink-muted mt-0.5 leading-snug">
-                    No payment required. Learn live with senior Microsoft &amp; Cisco mentors.
+                    No payment required. Experience one-to-one mentorship with industry experts.
                   </p>
                 </header>
 
@@ -345,8 +345,8 @@ export const EnrollmentModal = () => {
                     type="submit"
                     form="enrollment-form"
                     disabled={isSubmitting}
-                    className="btn-gradient btn-shine w-full py-3 rounded-xl text-[13px] font-bold text-[#04101F]
-                               shadow-glow-cyan hover:shadow-glow-mixed
+                    className="btn-gradient btn-shine w-full py-3 rounded-xl text-[13px] font-bold text-white
+                               shadow-glow-blue hover:shadow-glow-mixed
                                active:scale-[0.985] transition-transform duration-200
                                disabled:opacity-70 disabled:cursor-not-allowed
                                flex items-center justify-center gap-2 cursor-pointer"

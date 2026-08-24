@@ -17,7 +17,7 @@ export const GlassCard = memo(function GlassCard({
 }) {
   const hoverBorder =
     glow === 'purple'
-      ? 'hover:border-brand-purple/40'
+      ? 'hover:border-indigo-500/40'
       : glow === 'mixed'
         ? 'hover:border-brand-blue/40'
         : 'hover:border-accent/40';

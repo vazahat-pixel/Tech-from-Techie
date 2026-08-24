@@ -70,9 +70,9 @@ export const ConfettiSuccess = ({ studentName = 'Learner', courseName = '', onCl
 
       <div className="grid grid-cols-3 gap-2 mt-5 text-left">
         {[
-          { icon: Calendar, label: 'Duration', value: '3 Days Free', tone: 'text-brand-blue' },
-          { icon: Video, label: 'Format', value: 'Live & Interactive', tone: 'text-brand-purple' },
-          { icon: Clock, label: 'Next Batch', value: 'This Week', tone: 'text-emerald-500' },
+          { icon: Calendar, label: 'Demo Type', value: '1-on-1 Free', tone: 'text-brand-blue' },
+          { icon: Video, label: 'Format', value: 'Live & Interactive', tone: 'text-brand-indigo' },
+          { icon: Clock, label: 'Schedule', value: 'Flexible Timing', tone: 'text-emerald-500' },
         ].map(({ icon: Icon, label, value, tone }) => (
           <div key={label} className="p-2.5 rounded-lg bg-[var(--surface-200)] border border-line">
             <Icon className={`w-3.5 h-3.5 ${tone}`} />
@@ -85,11 +85,11 @@ export const ConfettiSuccess = ({ studentName = 'Learner', courseName = '', onCl
       <button
         onClick={onClose}
         className="btn-gradient btn-shine group w-full mt-5 py-2.5 rounded-xl text-[12.5px] font-bold
-                   text-[#04101F] shadow-glow-cyan hover:shadow-glow-mixed
+                   text-white shadow-glow-blue hover:shadow-glow-mixed
                    active:scale-[0.985] transition-transform duration-200 cursor-pointer
                    flex items-center justify-center gap-2"
       >
-        <span>Explore More Courses</span>
+        <span>Explore More Programs</span>
         <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
       </button>
     </motion.div>

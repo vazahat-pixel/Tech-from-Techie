@@ -65,13 +65,10 @@ export const Navbar = () => {
               aria-label={`${siteConfig.brand.name} — home`}
               className="group shrink-0 flex items-center rounded-xl focus-visible:outline-accent"
             >
-              {/* The supplied mark is a white wordmark, so it sits on a dark
-                  plate that stays constant across both themes — this keeps the
-                  brand legible without ever recolouring or distorting the art. */}
               <span
                 className="logo-plate relative flex items-center rounded-xl px-3 py-2
                            transition-[transform,box-shadow,border-color] duration-300 ease-out-expo
-                           group-hover:-translate-y-px group-hover:shadow-glow-cyan"
+                           group-hover:-translate-y-px group-hover:shadow-glow-blue"
               >
                 <img
                   src={logoUrl}
@@ -107,14 +104,14 @@ export const Navbar = () => {
               <button
                 onClick={() => openEnrollModal('')}
                 className="btn-gradient btn-shine group inline-flex items-center gap-2
-                           px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-[11.5px] sm:text-[12.5px] font-bold text-[#04101F]
-                           shadow-glow-cyan hover:shadow-glow-mixed
+                           px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-[11.5px] sm:text-[12.5px] font-bold text-white
+                           shadow-glow-blue hover:shadow-glow-mixed
                            hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]
                            transition-[transform,box-shadow,background-position] duration-300 ease-out-expo
                            cursor-pointer"
               >
                 <Sparkles className="w-3.5 h-3.5" />
-                <span className="hidden md:inline">Get 3 Days Free Demo</span>
+                <span className="hidden md:inline">Book Free Demo</span>
                 <span className="md:hidden">Free Demo</span>
                 <ArrowRight className="hidden sm:block w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
@@ -137,7 +134,7 @@ export const Navbar = () => {
         <div className="absolute bottom-0 inset-x-0 h-[2px] overflow-hidden pointer-events-none">
           <div
             ref={progressRef}
-            className="h-full origin-left bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-purple"
+            className="h-full origin-left bg-gradient-to-r from-brand-blue to-brand-indigo"
             style={{ transform: 'scaleX(0)', willChange: 'transform' }}
           />
         </div>
@@ -153,7 +150,7 @@ export const Navbar = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.24 }}
               onClick={() => setMobileOpen(false)}
-              className="fixed inset-0 z-40 bg-[#04070F]/60 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-40 bg-[#0B0F1A]/60 backdrop-blur-sm lg:hidden"
             />
 
             <motion.nav
@@ -185,12 +182,12 @@ export const Navbar = () => {
                   openEnrollModal('');
                 }}
                 className="btn-gradient btn-shine w-full mt-3 py-3 rounded-xl text-[13px] font-bold
-                           text-[#04101F] shadow-glow-cyan active:scale-[0.98]
+                           text-white shadow-glow-blue active:scale-[0.98]
                            transition-transform duration-200 cursor-pointer
                            inline-flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-4 h-4" />
-                Book Free 3-Day Demo
+                Book Your Free Demo
               </button>
             </motion.nav>
           </>

@@ -31,10 +31,10 @@ export const CourseSection = () => {
     <section id="courses" className="relative py-20 sm:py-28 overflow-hidden bg-radial-atmosphere">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Industry-Aligned Curriculum"
+          eyebrow="Industry-Oriented Programs"
           eyebrowIcon={BookOpen}
-          title={<>Explore Our <span className="gradient-text-cyan-purple">Top Courses</span></>}
-          subtitle="Practical, enterprise-relevant skills taught by senior practitioners with 12–15+ years at Microsoft, Cisco and global tech leaders."
+          title={<>Explore Our <span className="gradient-text-cyan-purple">Programs</span></>}
+          subtitle="Practical, career-focused technology training across Java, Full Stack, AI, Cloud & DevOps, and professional development."
         />
 
         {/* ---------- Filters ---------- */}
@@ -51,9 +51,9 @@ export const CourseSection = () => {
                   className={`relative shrink-0 px-3.5 py-1.5 rounded-lg text-[12.5px] font-medium whitespace-nowrap
                               transition-[color,background-color,box-shadow] duration-300 cursor-pointer
                               ${active
-                                ? 'text-[#04101F] font-bold shadow-glow-cyan'
+                                ? 'text-white font-bold shadow-glow-blue'
                                 : 'text-ink-muted hover:text-ink hover:bg-accent-soft'}`}
-                  style={active ? { background: 'linear-gradient(120deg,#00E5FF,#3B82F6)' } : undefined}
+                  style={active ? { background: 'linear-gradient(135deg,#2563EB,#4338CA)' } : undefined}
                 >
                   {category}
                 </button>
@@ -86,7 +86,7 @@ export const CourseSection = () => {
 
         {/* ---------- Grid ---------- */}
         {filteredCourses.length > 0 ? (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mt-7">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-7">
             {filteredCourses.map((course, i) => (
               <CourseCardSlot key={course.id} course={course} index={i} />
             ))}
@@ -98,7 +98,7 @@ export const CourseSection = () => {
             </span>
             <h3 className="font-display text-[15px] font-semibold text-ink mt-3">No courses found</h3>
             <p className="text-body-sm text-ink-muted mt-1.5">
-              Nothing matches {searchQuery ? `“${searchQuery}”` : 'this filter'}. Try another category
+              Nothing matches {searchQuery ? `"${searchQuery}"` : 'this filter'}. Try another category
               or clear your search.
             </p>
             <button
@@ -124,7 +124,7 @@ export const CourseSection = () => {
  * observer for cards that were already on screen.
  */
 const CourseCardSlot = memo(function CourseCardSlot({ course, index }) {
-  const ref = useReveal({ delay: Math.min(index, 2) * 45 });
+  const ref = useReveal({ delay: Math.min(index, 3) * 45 });
   return (
     <div ref={ref} data-reveal className="h-full">
       <CourseCard course={course} />

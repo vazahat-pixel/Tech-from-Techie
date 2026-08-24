@@ -31,18 +31,12 @@ export default {
           soft: 'var(--accent-soft)',
           contrast: 'var(--accent-contrast)',
         },
+        // Professional 2-tone brand palette: Blue + Indigo
         brand: {
-          cyan: '#00E5FF',
-          blue: '#3B82F6',
-          indigo: '#6366F1',
-          purple: '#8B5CF6',
-          violet: '#A855F7',
-          pink: '#EC4899',
-        },
-        tech: {
-          microsoft: '#00A4EF',
-          cisco: '#049FD9',
-          accent: '#00F5FF',
+          blue: '#2563EB',
+          indigo: '#4338CA',
+          purple: '#6D28D9',
+          cyan: '#60A5FA',
         },
       },
       fontFamily: {
@@ -63,13 +57,13 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'cyan-purple': 'linear-gradient(120deg, #00E5FF 0%, #3B82F6 48%, #8B5CF6 100%)',
-        'purple-pink': 'linear-gradient(120deg, #8B5CF6 0%, #EC4899 100%)',
+        'blue-indigo': 'linear-gradient(135deg, #2563EB 0%, #4338CA 100%)',
       },
       boxShadow: {
-        'glow-cyan': '0 0 30px -6px rgba(0, 229, 255, 0.38)',
-        'glow-purple': '0 0 30px -6px rgba(139, 92, 246, 0.38)',
-        'glow-mixed': '0 0 42px -12px rgba(0, 229, 255, 0.34), 0 0 64px -18px rgba(139, 92, 246, 0.28)',
+        'glow-blue': '0 0 28px -6px rgba(37, 99, 235, 0.32)',
+        'glow-indigo': '0 0 28px -6px rgba(67, 56, 202, 0.32)',
+        'glow-mixed': '0 0 36px -10px rgba(37, 99, 235, 0.28), 0 0 56px -16px rgba(67, 56, 202, 0.22)',
+        'glow-cyan': '0 0 28px -6px rgba(96, 165, 250, 0.32)',
         'elev-1': 'var(--shadow-1)',
         'elev-2': 'var(--shadow-2)',
         'elev-3': 'var(--shadow-3)',

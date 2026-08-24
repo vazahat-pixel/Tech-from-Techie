@@ -93,7 +93,7 @@ export const CourseDetailModal = () => {
               {/* Metrics */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                 <Metric icon={Clock} tone="text-accent" label="Duration" value={course.duration} />
-                <Metric icon={Video} tone="text-brand-purple" label="Format" value="Live + Recordings" />
+                <Metric icon={Video} tone="text-brand-indigo" label="Format" value="Live + Recordings" />
                 <Metric icon={ShieldCheck} tone="text-emerald-500" label="Mentor" value={instructor.companyBadge} />
                 <Metric icon={Award} tone="text-amber-500" label="Certificate" value="Verified Credential" />
               </div>
@@ -115,7 +115,7 @@ export const CourseDetailModal = () => {
                       <ul className="space-y-1 mt-2">
                         {module.topics.map((topic) => (
                           <li key={topic} className="flex items-start gap-1.5 text-[11.5px] text-ink-muted leading-snug">
-                            <Check className="w-3 h-3 text-brand-purple shrink-0 mt-0.5" strokeWidth={3} />
+                            <Check className="w-3 h-3 text-brand-indigo shrink-0 mt-0.5" strokeWidth={3} />
                             <span>{topic}</span>
                           </li>
                         ))}
@@ -127,12 +127,12 @@ export const CourseDetailModal = () => {
 
               {/* Projects */}
               <section>
-                <SubHeading icon={FolderGit2} tone="text-brand-purple">Capstone Industry Projects</SubHeading>
+                <SubHeading icon={FolderGit2} tone="text-brand-indigo">Capstone Industry Projects</SubHeading>
                 <div className="grid sm:grid-cols-3 gap-2.5 mt-3">
                   {course.projects.map((proj, i) => (
                     <div key={proj} className="p-3 rounded-xl bg-[var(--surface-200)] border border-line flex items-start gap-2.5">
-                      <span className="shrink-0 font-mono text-[11px] font-bold text-brand-purple
-                                       bg-brand-purple/12 px-1.5 py-1 rounded-md leading-none">
+                      <span className="shrink-0 font-mono text-[11px] font-bold text-brand-indigo
+                                       bg-brand-indigo/12 px-1.5 py-1 rounded-md leading-none">
                         {String(i + 1).padStart(2, '0')}
                       </span>
                       <p className="text-[11.5px] text-ink-muted leading-snug">{proj}</p>
@@ -199,7 +199,7 @@ export const CourseDetailModal = () => {
                 <button
                   onClick={() => openEnrollModal(course.title)}
                   className="btn-gradient btn-shine group flex-1 sm:flex-none px-5 py-2.5 rounded-xl
-                             text-[12px] font-bold text-[#04101F] shadow-glow-cyan hover:shadow-glow-mixed
+                             text-[12px] font-bold text-white shadow-glow-blue hover:shadow-glow-mixed
                              active:scale-[0.97] transition-transform duration-200 cursor-pointer
                              inline-flex items-center justify-center gap-1.5 whitespace-nowrap"
                 >
@@ -218,7 +218,7 @@ export const CourseDetailModal = () => {
 
 const TONE_CLASSES = {
   accent: 'bg-accent-soft text-accent border-accent/30',
-  purple: 'bg-brand-purple/12 text-brand-purple border-brand-purple/30',
+  purple: 'bg-brand-indigo/12 text-brand-indigo border-brand-indigo/30',
   emerald: 'bg-emerald-500/12 text-emerald-600 dark:text-emerald-400 border-emerald-500/30',
 };
 

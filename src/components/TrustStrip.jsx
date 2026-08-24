@@ -29,7 +29,7 @@ const TrustStat = memo(function TrustStat({ stat, index }) {
     >
       <span
         className="shrink-0 p-2.5 rounded-xl border border-accent/25
-                   bg-gradient-to-br from-brand-cyan/15 to-brand-purple/15
+                   bg-gradient-to-br from-brand-blue/15 to-brand-indigo/15
                    transition-transform duration-300 ease-out-expo group-hover:scale-110"
       >
         <Icon className="w-4.5 h-4.5 w-[18px] h-[18px] text-accent" />

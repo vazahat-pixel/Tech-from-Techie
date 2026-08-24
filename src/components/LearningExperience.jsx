@@ -42,7 +42,7 @@ const LearningTile = memo(function LearningTile({ feat, index }) {
     >
       <span
         className="inline-grid place-items-center w-10 h-10 rounded-xl mb-3
-                   bg-gradient-to-br from-brand-cyan/12 to-brand-purple/12
+                   bg-gradient-to-br from-brand-blue/12 to-brand-indigo/12
                    border border-accent/22
                    transition-transform duration-500 ease-out-expo group-hover/t:scale-110"
       >
