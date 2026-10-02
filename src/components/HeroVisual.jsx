@@ -160,12 +160,12 @@ export const HeroVisual = memo(function HeroVisual() {
       <div className="absolute -top-6 -right-3 sm:-right-6 z-20 hidden sm:flex items-center gap-2.5 p-2.5 px-3.5
                       rounded-xl bg-[#0B1020]/90 border border-blue-400/30 backdrop-blur-md shadow-elev-3 animate-float">
         <div className="relative">
-          <img
-            src={mentor.avatar}
-            alt={mentor.name}
-            className="w-9 h-9 rounded-full object-cover ring-2 ring-blue-400/50"
-          />
-          <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-400 ring-2 ring-[#0B1020]" />
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-blue to-accent p-[1.5px] shadow-glow-blue flex items-center justify-center">
+            <div className="w-full h-full rounded-[10px] bg-[#0E172E] flex items-center justify-center font-bold text-xs text-blue-300">
+              SA
+            </div>
+          </div>
+          <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400 ring-2 ring-[#0B1020]" />
         </div>
         <div>
           <div className="flex items-center gap-1">

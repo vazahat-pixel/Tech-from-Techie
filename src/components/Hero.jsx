@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, ArrowRight, ShieldCheck, Star, Video, ChevronDown } from 'lucide-react';
+import { Sparkles, ArrowRight, ShieldCheck, Star, Video, ChevronDown, BookOpen } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import { HeroVisual } from './HeroVisual';
 import { useModal } from '../context/ModalContext';
@@ -72,35 +72,37 @@ export const Hero = () => {
               ))}
             </ul>
 
-            {/* CTAs */}
+            {/* CTAs: Highlighted Explore + Compact Demo */}
             <div
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mt-8"
               style={{ '--i': 4 }}
             >
+              {/* Highlighted Explore Programs / Courses Button */}
               <button
-                onClick={() => openEnrollModal('')}
+                onClick={() => scrollToTarget('#courses')}
                 className="btn-gradient btn-shine group w-full sm:w-auto px-7 py-3.5 rounded-xl
-                           text-[13px] font-bold text-white shadow-glow-blue hover:shadow-glow-mixed
+                           text-[13.5px] font-bold text-white shadow-glow-blue hover:shadow-glow-mixed
                            hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]
                            transition-[transform,box-shadow,background-position] duration-300 ease-out-expo
                            cursor-pointer inline-flex items-center justify-center gap-2"
               >
-                <Sparkles className="w-4 h-4" />
-                <span>Book Your Free Demo</span>
+                <BookOpen className="w-4 h-4" />
+                <span>Explore All Courses</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
 
+              {/* Compact / Secondary Book Free Demo Button */}
               <button
-                onClick={() => scrollToTarget('#courses')}
-                className="group w-full sm:w-auto px-7 py-3.5 rounded-xl text-[13px] font-semibold
+                onClick={() => openEnrollModal('')}
+                className="group w-full sm:w-auto px-5 py-3 rounded-xl text-[12.5px] font-semibold
                            text-ink border border-line-strong bg-[var(--surface-100)]
                            hover:border-accent/50 hover:bg-accent-soft hover:-translate-y-0.5
                            active:translate-y-0 active:scale-[0.98]
                            transition-[transform,border-color,background-color] duration-300 ease-out-expo
                            cursor-pointer inline-flex items-center justify-center gap-2"
               >
-                <span>Explore Programs</span>
-                <ChevronDown className="w-4 h-4 text-accent transition-transform duration-300 group-hover:translate-y-0.5" />
+                <Sparkles className="w-3.5 h-3.5 text-accent" />
+                <span>Book Free Demo</span>
               </button>
             </div>
 
