@@ -2,7 +2,6 @@ import React, { useEffect, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Clock, Video, ShieldCheck, Check, FolderGit2, Sparkles, BookOpen, Award, ArrowRight, Target } from 'lucide-react';
 import { useModal } from '../context/ModalContext';
-import { instructors } from '../data/instructors';
 import { lockScroll } from '../lib/smoothScroll';
 
 export const CourseDetailModal = () => {
@@ -27,9 +26,6 @@ export const CourseDetailModal = () => {
   }, [isCourseDetailOpen, closeCourseDetail]);
 
   const course = activeDetailCourse;
-  const instructor = course
-    ? instructors.find((i) => i.id === course.instructorId) || instructors[0]
-    : null;
 
   return (
     <AnimatePresence>
@@ -94,7 +90,7 @@ export const CourseDetailModal = () => {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                 <Metric icon={Clock} tone="text-accent" label="Duration" value={course.duration} />
                 <Metric icon={Video} tone="text-brand-indigo" label="Format" value="Live + Recordings" />
-                <Metric icon={ShieldCheck} tone="text-emerald-500" label="Mentor" value={instructor.companyBadge} />
+                <Metric icon={ShieldCheck} tone="text-emerald-500" label="Mentorship" value="12+ Yrs Tech Leads" />
                 <Metric icon={Award} tone="text-amber-500" label="Certificate" value="Verified Credential" />
               </div>
 
@@ -156,24 +152,22 @@ export const CourseDetailModal = () => {
                 </section>
               )}
 
-              {/* Instructor */}
-              <section className="p-4 rounded-xl bg-[var(--surface-200)] border border-accent/25 flex flex-col sm:flex-row gap-4">
-                <img
-                  src={instructor.avatar}
-                  alt=""
-                  aria-hidden
-                  loading="lazy"
-                  className="w-14 h-14 rounded-xl object-cover object-top ring-2 ring-accent/35 shrink-0 mx-auto sm:mx-0"
-                />
-                <div className="text-center sm:text-left">
+              {/* Industry Mentorship Info */}
+              <section className="p-4 rounded-xl bg-[var(--surface-200)] border border-accent/25 flex flex-col sm:flex-row items-center gap-3.5">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-blue to-accent text-white flex items-center justify-center shrink-0 shadow-glow-blue">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <div className="text-center sm:text-left flex-1">
                   <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-                    <h4 className="text-[13.5px] font-bold text-ink">{instructor.name}</h4>
+                    <h4 className="text-[13.5px] font-bold text-ink">Industry Mentorship Program</h4>
                     <span className="px-1.5 py-0.5 rounded text-[10px] font-bold text-accent bg-accent-soft border border-accent/30">
-                      {instructor.companyBadge}
+                      12+ Years Experience
                     </span>
-                    <span className="text-[11px] text-ink-soft">{instructor.experience}</span>
+                    <span className="text-[11px] text-ink-soft">NIT / MANIT Tech Leads</span>
                   </div>
-                  <p className="text-[12px] text-ink-muted leading-relaxed mt-1.5">{instructor.bio}</p>
+                  <p className="text-[12px] text-ink-muted leading-relaxed mt-1.5">
+                    Taught and mentored live by experienced software engineering leads and architects with enterprise-grade experience. Zero canned lectures — personal code reviews, live debugging, and career direction.
+                  </p>
                 </div>
               </section>
             </div>
