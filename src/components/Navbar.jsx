@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, Menu, X, ArrowRight } from 'lucide-react';
+import { Sparkles, Menu, X, ArrowRight, BookOpen } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import { useModal } from '../context/ModalContext';
 import { ThemeToggle } from './UI/ThemeToggle';
 import { onFrame, scrollToTarget, lockScroll } from '../lib/smoothScroll';
-import logoUrl from '../Tech Logo.svg';
+import { TechLogo } from './TechLogo';
 
 export const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -66,17 +66,11 @@ export const Navbar = () => {
               className="group shrink-0 flex items-center rounded-xl focus-visible:outline-accent"
             >
               <span
-                className="logo-plate relative flex items-center rounded-xl px-3 py-2
-                           transition-[transform,box-shadow,border-color] duration-300 ease-out-expo
-                           group-hover:-translate-y-px group-hover:shadow-glow-blue"
+                className="logo-plate relative flex items-center rounded-xl px-1.5 sm:px-2 py-1.5
+                           transition-transform duration-300 ease-out-expo
+                           group-hover:-translate-y-px"
               >
-                <img
-                  src={logoUrl}
-                  alt={siteConfig.brand.name}
-                  width={200}
-                  height={40}
-                  className="h-[26px] sm:h-[30px] w-auto object-contain"
-                />
+                <TechLogo className="h-[26px] sm:h-[30px] w-auto" />
               </span>
             </a>
 
@@ -98,29 +92,44 @@ export const Navbar = () => {
             </nav>
 
             {/* ---------- Actions ---------- */}
-            <div className="flex items-center gap-2 shrink-0">
+            <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
               <ThemeToggle />
 
-              <button
-                onClick={() => openEnrollModal('')}
-                className="btn-gradient btn-shine group inline-flex items-center gap-2
-                           px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-[11.5px] sm:text-[12.5px] font-bold text-white
+              {/* Highlighted Explore Courses Button */}
+              <a
+                href="#courses"
+                onClick={(e) => handleNavClick(e, '#courses')}
+                className="btn-gradient btn-shine group hidden sm:inline-flex items-center gap-1.5
+                           px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl text-[11.5px] sm:text-[12px] font-bold text-white
                            shadow-glow-blue hover:shadow-glow-mixed
                            hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]
                            transition-[transform,box-shadow,background-position] duration-300 ease-out-expo
                            cursor-pointer"
               >
-                <Sparkles className="w-3.5 h-3.5" />
-                <span className="hidden md:inline">Book Free Demo</span>
-                <span className="md:hidden">Free Demo</span>
-                <ArrowRight className="hidden sm:block w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                <BookOpen className="w-3.5 h-3.5" />
+                <span>Explore Courses</span>
+                <ArrowRight className="hidden md:inline w-3 h-3 transition-transform duration-300 group-hover:translate-x-0.5" />
+              </a>
+
+              {/* Compact / Chota Book Free Demo Button */}
+              <button
+                onClick={() => openEnrollModal('')}
+                className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl
+                           text-[11px] sm:text-[11.5px] font-semibold text-ink border border-line-strong
+                           bg-[var(--surface-100)] hover:text-accent hover:border-accent/40 hover:bg-accent-soft
+                           hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]
+                           transition-all duration-200 cursor-pointer"
+              >
+                <Sparkles className="w-3 h-3 text-accent" />
+                <span className="hidden md:inline">Book Demo</span>
+                <span className="md:hidden">Demo</span>
               </button>
 
               <button
                 onClick={() => setMobileOpen((v) => !v)}
                 aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={mobileOpen}
-                className="lg:hidden p-2 rounded-xl border border-line-strong bg-[var(--surface-100)]
+                className="lg:hidden p-1.5 sm:p-2 rounded-xl border border-line-strong bg-[var(--surface-100)]
                            text-ink hover:border-accent/50 active:scale-90
                            transition-all duration-200 cursor-pointer"
               >
@@ -176,19 +185,33 @@ export const Navbar = () => {
                 ))}
               </div>
 
-              <button
-                onClick={() => {
-                  setMobileOpen(false);
-                  openEnrollModal('');
-                }}
-                className="btn-gradient btn-shine w-full mt-3 py-3 rounded-xl text-[13px] font-bold
-                           text-white shadow-glow-blue active:scale-[0.98]
-                           transition-transform duration-200 cursor-pointer
-                           inline-flex items-center justify-center gap-2"
-              >
-                <Sparkles className="w-4 h-4" />
-                Book Your Free Demo
-              </button>
+              <div className="grid grid-cols-2 gap-2 mt-3">
+                <a
+                  href="#courses"
+                  onClick={(e) => handleNavClick(e, '#courses')}
+                  className="btn-gradient btn-shine py-2.5 rounded-xl text-[12px] font-bold
+                             text-white shadow-glow-blue active:scale-[0.98]
+                             transition-transform duration-200 cursor-pointer
+                             inline-flex items-center justify-center gap-1.5"
+                >
+                  <BookOpen className="w-3.5 h-3.5" />
+                  Explore Courses
+                </a>
+
+                <button
+                  onClick={() => {
+                    setMobileOpen(false);
+                    openEnrollModal('');
+                  }}
+                  className="py-2.5 rounded-xl text-[12px] font-semibold text-ink
+                             border border-line-strong bg-[var(--surface-100)]
+                             active:scale-[0.98] transition-transform duration-200
+                             inline-flex items-center justify-center gap-1.5"
+                >
+                  <Sparkles className="w-3 h-3 text-accent" />
+                  Book Demo
+                </button>
+              </div>
             </motion.nav>
           </>
         )}

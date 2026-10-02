@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Linkedin, Youtube, Instagram, Facebook, Sparkles, 
 import { siteConfig } from '../data/siteConfig';
 import { useModal } from '../context/ModalContext';
 import { scrollToTarget } from '../lib/smoothScroll';
-import logoUrl from '../Tech Logo.svg';
+import { TechLogo } from './TechLogo';
 
 const SOCIAL_ICONS = { Linkedin, Youtube, Instagram, Facebook };
 
@@ -35,16 +35,10 @@ export const Footer = () => {
               className="inline-flex group rounded-xl"
               aria-label={`${siteConfig.brand.name} — back to top`}
             >
-              <span className="logo-plate flex items-center rounded-xl px-3 py-2
-                               transition-[transform,box-shadow] duration-300 ease-out-expo
-                               group-hover:-translate-y-px group-hover:shadow-glow-blue">
-                <img
-                  src={logoUrl}
-                  alt={siteConfig.brand.name}
-                  width={190}
-                  height={38}
-                  className="h-[26px] w-auto object-contain"
-                />
+              <span className="logo-plate flex items-center rounded-xl px-1.5 sm:px-2 py-1.5
+                               transition-transform duration-300 ease-out-expo
+                               group-hover:-translate-y-px">
+                <TechLogo className="h-[26px] w-auto" />
               </span>
             </a>
 

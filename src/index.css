@@ -392,14 +392,50 @@ html.dark .gradient-text-cyan-purple {
 }
 .nav-shell[data-scrolled="true"] .nav-bar { height: 62px; }
 
-/* Brand plate: keeps the white wordmark readable in light mode too. */
-.logo-plate {
-  background: linear-gradient(135deg, #0E1730 0%, #1A2444 100%);
-  border: 1px solid rgba(96, 165, 250, 0.20);
+/* Brand plate: seamlessly integrates with navbar in both dark and light modes */
+.logo-plate,
+html:not(.dark) .logo-plate,
+html.dark .logo-plate {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
 }
-html:not(.dark) .logo-plate {
-  border-color: rgba(17, 24, 39, 0.12);
-  box-shadow: var(--shadow-1);
+
+/* Logo SVG dynamic fill for light and dark themes */
+.tech-logo-text,
+.tech-logo-text path,
+path.tech-logo-text {
+  fill: #0F172A !important;
+  transition: fill 200ms ease;
+}
+html.dark .tech-logo-text,
+html.dark .tech-logo-text path,
+html.dark path.tech-logo-text {
+  fill: #FEFEFE !important;
+}
+
+.tech-logo-subtext,
+.tech-logo-subtext path,
+path.tech-logo-subtext {
+  fill: #334155 !important;
+  transition: fill 200ms ease;
+}
+html.dark .tech-logo-subtext,
+html.dark .tech-logo-subtext path,
+html.dark path.tech-logo-subtext {
+  fill: #E2E8F0 !important;
+}
+
+.tech-logo-brand,
+.tech-logo-brand path,
+path.tech-logo-brand {
+  fill: #0D9488 !important;
+  transition: fill 200ms ease;
+}
+html.dark .tech-logo-brand,
+html.dark .tech-logo-brand path,
+html.dark path.tech-logo-brand {
+  fill: #66BEA6 !important;
 }
 
 /* ==========================================================================
