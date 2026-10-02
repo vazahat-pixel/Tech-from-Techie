@@ -28,8 +28,8 @@ export const InstructorSection = () => {
         </div>
 
         {/* Static centered 2-card grid */}
-        <div className="flex justify-center mt-14">
-          <div className="grid sm:grid-cols-2 gap-5 sm:gap-6 max-w-2xl w-full">
+        <div className="flex justify-center mt-12 sm:mt-14">
+          <div className="grid sm:grid-cols-2 gap-5 sm:gap-6 max-w-4xl w-full">
             {instructors.map((instructor, i) => (
               <InstructorCardSlot key={instructor.id} instructor={instructor} index={i} />
             ))}
